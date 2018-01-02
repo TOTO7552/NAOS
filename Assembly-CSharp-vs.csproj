@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{0A08188A-84FD-8FE3-D61F-E6C3DB291C45}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_3;UNITY_4_6;UNITY_STANDALONE_OSX;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_IL2CPP;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;UNITY5_SCRIPTING_IN_UNITY4;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Audio\AudioElement.cs" />
+     <Compile Include="Assets\Scripts\Interfaces\ICanSelect.cs" />
+     <Compile Include="Assets\Scripts\Interfaces\IFighter.cs" />
+     <Compile Include="Assets\Scripts\Interfaces\IMovable.cs" />
+     <Compile Include="Assets\Scripts\Interfaces\ISelectable.cs" />
+     <Compile Include="Assets\Scripts\MonoBehaviors\EventManager.cs" />
+     <Compile Include="Assets\Scripts\MonoBehaviors\For Players\Attackable.cs" />
+     <Compile Include="Assets\Scripts\MonoBehaviors\For Players\IAttackable.cs" />
+     <Compile Include="Assets\Scripts\MonoBehaviors\For Players\Player controls\CameraControl.cs" />
+     <Compile Include="Assets\Scripts\MonoBehaviors\For Players\PlayerObjectSelection.cs" />
+     <Compile Include="Assets\Scripts\MonoBehaviors\For Players\PlayingSelectionOrderTrigger.cs" />
+     <Compile Include="Assets\Scripts\MonoBehaviors\For WorlObjects\Fighter.cs" />
+     <Compile Include="Assets\Scripts\MonoBehaviors\For WorlObjects\Movable.cs" />
+     <Compile Include="Assets\Scripts\MonoBehaviors\For WorlObjects\Selectable.cs" />
+     <Compile Include="Assets\Scripts\MonoBehaviors\For WorlObjects\StateActionListening.cs" />
+     <Compile Include="Assets\Scripts\MonoBehaviors\For WorlObjects\WorldObjectMenu.cs" />
+     <Compile Include="Assets\Scripts\MonoBehaviors\HUD\HUD.cs" />
+     <Compile Include="Assets\Scripts\MonoBehaviors\HUD\SelectionList\SelectionList.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\For Player\PlayerSelectionHelper.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\For Player\SelectionMouseActivity.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\For WorldObjects\Building.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\For WorldObjects\Humanoid\Body.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\For WorldObjects\Humanoid\Brain.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\For WorldObjects\Humanoid\Character.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\For WorldObjects\Humanoid\Humanoid.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\For WorldObjects\Humanoid\Inventory.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\For WorldObjects\Humanoid\Life.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\For WorldObjects\Humanoid\Skill.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\For WorldObjects\Move Strategies\MoveStrategy.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\For WorldObjects\Move Strategies\MoveStrategyAsset.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\Template\SelectableDataAsset.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\Template\SelectableManager.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\Template\SelectableUnit.cs" />
+     <Compile Include="Assets\Scripts\Statics\RTS\Enums.cs" />
+     <Compile Include="Assets\Scripts\Statics\RTS\IdAttributor.cs" />
+     <Compile Include="Assets\Scripts\Statics\RTS\ResourceManager.cs" />
+     <Compile Include="Assets\Scripts\Statics\RTS\WorkManager.cs" />
+     <Compile Include="Assets\Scripts\Utils\ScriptableObjectUtility.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\AI\AILerp.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\AI\AIPath.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\AI\NavmeshController.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\AI\Seeker.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\AstarData.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\AstarMath.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\AstarPath.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\GraphUpdateScene.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\GraphUpdateShape.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\AnimationLink.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\ArrayPool.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\AstarDebugger.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\AstarEnumFlagAttr.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\BinaryHeap.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\GraphEditorBase.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\GraphModifier.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\GraphUpdateProcessor.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\Int3.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\ListPool.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\NodeLink.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\NodeLink2.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\NodeLink3.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\ObjectPool.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\PathPool.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\PathProcessor.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\PathReturnQueue.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\StackPool.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\ThreadControlQueue.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\WindowsStoreCompatibility.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Misc\WorkItemProcessor.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Nodes\GraphNode.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Path.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\PathHandler.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Serialization\JsonConverters.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Serialization\JsonSerializer.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Serialization\SimpleJsonReplacement.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Serialization\SimpleZipReplacement.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\Serialization\TinyJson.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Core\astarclasses.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\ExampleScenes\Example12_Procedural\ProceduralGridMover.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\ExampleScenes\Example12_Procedural\ProceduralWorld.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\ExampleScenes\ExampleScripts\AIFollow.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\ExampleScenes\ExampleScripts\AstarSmoothFollow2.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\ExampleScenes\ExampleScripts\DoorController.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\ExampleScenes\ExampleScripts\DynamicGridObstacle.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\ExampleScenes\ExampleScripts\MineBotAI.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\ExampleScenes\ExampleScripts\ObjectPlacer.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\ExampleScenes\ExampleScripts\TargetMover.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Generators\Base.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Generators\GridGenerator.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Generators\NavMeshGenerator.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Generators\NodeClasses\GridNode.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Generators\NodeClasses\GridNodeBase.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Generators\NodeClasses\PointNode.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Generators\NodeClasses\TriangleMeshNode.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Generators\PointGenerator.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Generators\QuadtreeGraph.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Generators\Utilities\BBTree.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Generators\Utilities\EuclideanEmbedding.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Generators\Utilities\NavMeshRenderer.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Generators\Utilities\ObjImporter.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Generators\Utilities\RecastMeshGatherer.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Modifiers\AlternativePath.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Modifiers\FunnelModifier.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Modifiers\Modifiers.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Modifiers\RaycastModifier.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Modifiers\SimpleSmoothModifier.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Modifiers\StartEndModifier.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Navmesh\RelevantGraphSurface.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Pathfinders\ABPath.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Utilities\AstarChecksum.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Utilities\AstarMemory.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Utilities\AstarParallel.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Utilities\AstarProfiler.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Utilities\DotNetReplacements.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Utilities\GraphUpdateUtilities.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Utilities\LockFreeStack.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Utilities\PathUtilities.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Utilities\ProfileHelper.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
+     <Compile Include="Assets\Tools\AstarPathfindingProject\changelog.cs" />
+     <Compile Include="Assets\Tools\UnitAstarPathFinder.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts 2.5D\FlockingUnit25.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts 2.5D\Movement\Cohesion25.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts 2.5D\Movement\ColAvoidObstacle25.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts 2.5D\Movement\Separation25.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts 2.5D\Movement\VelocityMatch25.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts 2.5D\Movement\WallAvoidance25.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts 2.5D\SeekUnit25.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts 2.5D\SeekVehicule.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts 2.5D\SteeringBasics25.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts 2.5D\WallAvoidanceUnit25.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\ArriveUnit.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Camera\CameraMovement.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Camera\InfiniteGrid.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\ColAvoidUnit.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\EvadeUnit.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\FleeUnit.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\FlockingUnit.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\FollowPathUnit.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\HideUnit.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\InterposeUnit.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\Cohesion.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\CollisionAvoidance.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\Evade.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\Flee.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\FollowPath.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\Hide.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\LinePath.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\NearHumanoidSensor.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\NearObstacleSensor.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\NearSensor.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\OffsetPursuit.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\Pursue.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\Separation.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\SteeringBasics.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\VelocityMatch.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\WallAvoidance.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\Wander1.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Movement\Wander2.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\OffsetPursuitUnit.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\PursueUnit.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\ScreenBoundary.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\SeekUnit.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\WallAvoidanceUnit.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Wander1Unit.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\Wander2Unit.cs" />
+     <Compile Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Scripts\WanderAvoidUnit.cs" />
+     <None Include="Assets\Tools\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader" />
+     <None Include="Assets\Audio\Blade Sounds\Blade Sounds Readme.txt" />
+     <None Include="Assets\Tools\AstarPathfindingProject\Plugins\DotNetZip\DotNetZipLicense.txt" />
+     <None Include="Assets\Tools\unity-movement-ai-master - 2.5D\Assets\unity-movement-ai\Models\Materials\Lines.shader" />
+     <None Include="Assets\Tools\AstarPathfindingProject\ExampleScenes\Materials\Projector Multiply.shader" />
+     <None Include="Assets\Tools\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
+     <None Include="Assets\Tools\AstarPathfindingProject\Plugins\dependencies.txt" />
+     <None Include="Assets\Tools\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
+     <None Include="Assets\Tools\AstarPathfindingProject\Readme_upgrading.txt" />
+     <None Include="Assets\Tools\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
+     <None Include="Assets\Tools\AstarPathfindingProject\Readme.txt" />
+     <None Include="Assets\Tools\unity-movement-ai-master - 2.5D\ProjectSettings\ProjectVersion.txt" />
+     <None Include="Assets\Tools\AstarPathfindingProject\Editor\EditorAssets\Materials\NavmeshOutline.shader" />
+     <None Include="Assets\Prefabs\Medieval_Toon_Character\ReadMe.txt" />
+     <None Include="Assets\Audio\FootstepsSoundsCarpetPack\FootstepsSoundsCarpetPackInfo.txt" />
+     <None Include="Assets\Tools\AstarPathfindingProject\link.xml" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+ <HintPath>/Users/robertchardon/Desktop/THEO/NewAgeOfSurviving/2017-08-19 - 1 - NAOS/Assets/Tools/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
